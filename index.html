@@ -1,142 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Birva Chudasama |  Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birva Chudasama | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #f2f2f2;
-      --text-color: #333;
-      --link-color: #007acc;
-    }
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --link-color: #66ccff;
-    }
-
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      transition: background 0.3s, color 0.3s;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #e1bee7);
+      margin: 0; padding: 0; color: #333;
     }
-    h1, h2 {
-      color: var(--text-color);
+    .container { max-width: 900px; margin: auto; padding: 2rem; }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
     }
-    a {
-      color: var(--link-color);
+    header h1 {
+      font-size: 3rem;
+      color: #2c3e50;
+    }
+    header p {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: none;
+      border: 2px solid #6a1b9a;
+      border-radius: 5px;
+      color: #6a1b9a;
       text-decoration: none;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 1rem;
-    }
-    .project-title {
       font-weight: bold;
     }
-    .profile-photo {
-      display: block;
-      margin: 0 auto 1rem;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    section {
+      margin-top: 4rem;
     }
-    .toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: 1px solid var(--text-color);
-      padding: 5px 10px;
-      cursor: pointer;
-      color: var(--text-color);
-      border-radius: 5px;
+    section h2 {
+      border-bottom: 2px solid #9c27b0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+    }
+    .project {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-top: 0.5rem;
+    }
+    .tags span {
+      background: #e1bee7;
+      color: #6a1b9a;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 3px;
+      margin-right: 0.4rem;
+      display: inline-block;
+    }
+    .source-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <img src="images/birva.jpeg" alt="Birva Chudasama" class="about-img">
+      <h1>Hello, I'm Birva</h1>
+      <p>I'm a tech enthusiast specializing in software development, data analytics, and machine learning. I enjoy building projects that solve real-world problems using technology and data-driven solutions.</p>
+      <a href="files/Birva_Chudasama_Resume.pdf" class="download-btn" target="_blank">Download CV</a>
+    </header>
 
-  <button class="toggle" onclick="toggleTheme()">🌗 Toggle Theme</button>
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>ML Experiments & Notebook Demos</h3>
+        <div class="tags">
+          <span>Python</span><span>Scikit-learn</span><span>Colab</span>
+        </div>
+        <p>Exploratory machine learning models, feature selection, and regression testing using sklearn.</p>
+        <a href="https://github.com/BirvaChudasama/ML-notebooks" class="source-link" target="_blank">Source Code</a>
+      </div>
 
-  <img src="images/birva.jpeg" alt="Profile Photo" class="profile-photo" />
+      <div class="project">
+        <h3>Qualitative Analysis using Python</h3>
+        <div class="tags">
+          <span>NLP</span><span>LDA</span><span>Sentiment Analysis</span>
+        </div>
+        <p>Text mining project focused on open-ended survey data using LDA and sentiment extraction.</p>
+        <a href="https://github.com/BirvaChudasama/Qualitative-analysis" class="source-link" target="_blank">Source Code</a>
+      </div>
 
+      <div class="project">
+        <h3>Toronto Road Safety Dashboard</h3>
+        <div class="tags">
+          <span>Tableau</span><span>Visualization</span>
+        </div>
+        <p>Dashboard visualizing motor vehicle collision data with traffic, road, and weather insights.</p>
+        <a href="https://public.tableau.com/shared/DGSTG4D22?:display_count=n&:origin=viz_share_link" class="source-link" target="_blank">View Dashboard</a>
+      </div>
 
-  <h1>Birva Chudasama</h1>
-  <p>Emerging IT professional with expertise in Python, Machine Learning, and Data Analytics — driven by curiosity and innovation.</p>
-
-
-  <div class="section">
-    <h2>About Me</h2>
-    <p>Passionate IT professional skilled in Software Development, Python, and Data Analytics — committed to leveraging Machine Learning for real-world impact.</p>
-
+      <div class="project">
+        <h3>ArcGIS StoryMap – Study Spots</h3>
+        <div class="tags">
+          <span>GIS</span><span>StoryMap</span><span>Location Analysis</span>
+        </div>
+        <p>Interactive map-based guide helping students find ideal locations for studying around campus.</p>
+        <a href="https://storymaps.arcgis.com/stories/fedb435ff2d94106a6583536b79a278f" class="source-link" target="_blank">View StoryMap</a>
+      </div>
+    </section>
   </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <span class="project-title">ML Experiments & Notebook Demos</span><br />
-        A collection of practical ML algorithms, model evaluation, and notebook-based analysis using Python and Scikit-learn.<br />
-        <a href="https://github.com/BirvaChudasama/ML-notebooks" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <span class="project-title">Qualitative Analysis using Python</span><br />
-        Python-based NLP workflows for text cleaning, LDA topic modeling, and sentiment extraction.<br />
-        <a href="https://github.com/BirvaChudasama/Qualitative-analysis" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <span class="project-title">Toronto Road Safety Dashboard (Tableau)</span><br />
-        A dynamic Tableau dashboard visualizing road accident patterns based on traffic, weather, and location data.<br />
-        <a href="https://public.tableau.com/shared/DGSTG4D22?:display_count=n&:origin=viz_share_link" target="_blank">View Dashboard</a>
-      </li>
-      <li>
-        <span class="project-title">ArcGIS StoryMap – Best Places to Study</span><br />
-        A geospatial story combining map layers and narrative to guide students in choosing optimal study spots.<br />
-        <a href="https://storymaps.arcgis.com/stories/fedb435ff2d94106a6583536b79a278f" target="_blank">View StoryMap</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Resume</h2>
-    <p><a href="files/Birva_Chudasama_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:birva210@gmail.com">birva210@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/BirvaChudasama" target="_blank">github.com/BirvaChudasama</a></p>
-  </div>
-
-  <script>
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      if (currentTheme === "dark") {
-        document.documentElement.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    }
-    // Load saved theme on page load
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
-  </script>
-
 </body>
 </html>
