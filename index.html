@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Birva Chudasama |  Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg-color: #f2f2f2;
+      --text-color: #333;
+      --link-color: #007acc;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #66ccff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      transition: background 0.3s, color 0.3s;
+    }
+    h1, h2 {
+      color: var(--text-color);
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+    .project-title {
+      font-weight: bold;
+    }
+    .profile-photo {
+      display: block;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 1px solid var(--text-color);
+      padding: 5px 10px;
+      cursor: pointer;
+      color: var(--text-color);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle" onclick="toggleTheme()">🌗 Toggle Theme</button>
+
+  <img src="images/birva.jpg" alt="Profile Photo" class="profile-photo" />
+
+  <h1>Birva Chudasama</h1>
+  <p>Emerging IT professional with expertise in Python, Machine Learning, and Data Analytics — driven by curiosity and innovation.</p>
+
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Passionate IT professional skilled in Software Development, Python, and Data Analytics — committed to leveraging Machine Learning for real-world impact.</p>
+
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <span class="project-title">ML Experiments & Notebook Demos</span><br />
+        A collection of practical ML algorithms, model evaluation, and notebook-based analysis using Python and Scikit-learn.<br />
+        <a href="https://github.com/BirvaChudasama/ML-notebooks" target="_blank">View on GitHub</a>
+      </li>
+      <li>
+        <span class="project-title">Qualitative Analysis using Python</span><br />
+        Python-based NLP workflows for text cleaning, LDA topic modeling, and sentiment extraction.<br />
+        <a href="https://github.com/BirvaChudasama/Qualitative-analysis" target="_blank">View on GitHub</a>
+      </li>
+      <li>
+        <span class="project-title">Toronto Road Safety Dashboard (Tableau)</span><br />
+        A dynamic Tableau dashboard visualizing road accident patterns based on traffic, weather, and location data.<br />
+        <a href="https://public.tableau.com/shared/DGSTG4D22?:display_count=n&:origin=viz_share_link" target="_blank">View Dashboard</a>
+      </li>
+      <li>
+        <span class="project-title">ArcGIS StoryMap – Best Places to Study</span><br />
+        A geospatial story combining map layers and narrative to guide students in choosing optimal study spots.<br />
+        <a href="https://storymaps.arcgis.com/stories/fedb435ff2d94106a6583536b79a278f" target="_blank">View StoryMap</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Resume</h2>
+    <p><a href="files/Birva_Chudasama_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:birva210@gmail.com">birva210@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/BirvaChudasama" target="_blank">github.com/BirvaChudasama</a></p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+    // Load saved theme on page load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  </script>
+
+</body>
+</html>
